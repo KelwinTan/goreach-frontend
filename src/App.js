@@ -15,7 +15,6 @@ function App() {
               <Home />
            </AnimationRevealPage>
          )}/>
-         <Route path = '/About' component={About}/>
          <Route path = '/Sponsor' component={SponsorHome}/>
     </Router>
 

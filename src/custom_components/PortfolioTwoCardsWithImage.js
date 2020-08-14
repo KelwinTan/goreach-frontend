@@ -8,6 +8,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
 import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
+import {Link} from "react-router-dom";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -77,7 +78,8 @@ export default ({
       type: "",
       title: "Find people who connect to your audiences. Get better reach.",
       durationText: "90 Days Campaign",
-      locationText: "New York"
+      locationText: "New York",
+      link: "/Sponsor", 
     },
     {
       imageSrc:
@@ -86,7 +88,8 @@ export default ({
       type: "",
       title: "Get funded and help promote businesses, grow your network.",
       durationText: "180 Day Campaign",
-      locationText: "Palo Alto"
+      locationText: "Palo Alto",
+      link: "/"
     }
   ];
   return (
@@ -110,7 +113,9 @@ export default ({
                     <CardType>{card.type}</CardType>
                   </CardHeader>
                   <CardTitle>{card.title}</CardTitle>
+                  <Link to={card.link}>
                   <CardAction>{cardLinkText}</CardAction>
+                  </Link>
                 </CardText>
               </Card>
             </CardColumn>
