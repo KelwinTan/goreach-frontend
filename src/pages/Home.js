@@ -3,8 +3,8 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import About from "pages/About"
-
-import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import ChooseRegister from "custom_components/PortfolioTwoCardsWithImage.js"
+import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "components/headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
@@ -39,7 +39,7 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-bas
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="localhost:3000">
+      <NavLink href="/">
         Home
       </NavLink>
       <NavLink href="/About">
@@ -57,17 +57,20 @@ export default () => {
   ];
 
   return (
+    <div>
     <Container>
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              ReachMe
+                Connect.Collaborate.Reach.
           </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
+          <PrimaryAction>Reach Us</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
+    <ChooseRegister/>
+    </div>
   );
 };
