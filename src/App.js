@@ -10,15 +10,13 @@ import {BrowserRouter as Router,Route} from 'react-router-dom'
 function App() {
   return (
     <Router>
-      <div>
          <Route exact path='/' render = {props =>(
-            <AnimationRevealPage>
+           <AnimationRevealPage disabled>
               <Home />
-            </AnimationRevealPage>
+           </AnimationRevealPage>
          )}/>
          <Route path = '/About' component={About}/>
          <Route path = '/Sponsor' component={SponsorHome}/>
-      </div>
     </Router>
 
   )
