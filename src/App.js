@@ -2,7 +2,7 @@ import React from "react"
 import 'App.css'
 import "tailwindcss/dist/base.css"
 import AnimationRevealPage from "helpers/AnimationRevealPage"
-import Home from "components/hero/BackgroundAsImageWithCenteredContent"
+import Home from "pages/Home"
 import About from "pages/About"
 import SponsorHome from "pages/SponsorHome"
 import {BrowserRouter as Router,Route} from 'react-router-dom'
