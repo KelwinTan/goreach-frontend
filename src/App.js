@@ -8,7 +8,8 @@ import SponsorHome from "pages/SponsorHome"
 import JoinSponsor from "pages/JoinSponsor"
 import JoinInfluencer from "pages/JoinInfluencer"
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import InfluencerHome from "pages/InfluencerHome"
+
+import InfluencerHome from "pages/InfluencerHome
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/Sponsor' component={SponsorHome} />
       <Route path='/join-sponsor' component={JoinSponsor} />
       <Route path='/join-influencer' component={JoinInfluencer} />
+
     </Router>
 
   )
