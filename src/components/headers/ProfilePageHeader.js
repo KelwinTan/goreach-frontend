@@ -5,8 +5,9 @@ import { Container } from "reactstrap";
 
 // core components
 
-function ProfilePageHeader() {
+function ProfilePageHeader(props) {
   let pageHeader = React.createRef();
+  let imgUrl = props.card.imageSrc;
 
   React.useEffect(() => {
     if (window.innerWidth > 991) {
@@ -36,14 +37,14 @@ function ProfilePageHeader() {
         ></div>
         <Container>
           <div className="photo-container">
-            <img alt="..." src={require("img/ryan.jpg")}></img>
+            <img alt="..." src={imgUrl}></img>
           </div>
-          <h3 className="title">Ryan Scheinder</h3>
+        <h3 className="title">{props.card.name}</h3>
           <p className="category">Photographer</p>
           <div className="content">
             <div className="social-description">
-              <h2>26</h2>
-              <p>Comments</p>
+              <h2>{props.card.followers}</h2>
+              <p>Followers</p>
             </div>
             <div className="social-description">
               <h2>26</h2>
@@ -51,7 +52,7 @@ function ProfilePageHeader() {
             </div>
             <div className="social-description">
               <h2>48</h2>
-              <p>Bookmarks</p>
+              <p>Likes</p>
             </div>
           </div>
         </Container>

@@ -33,8 +33,11 @@ ${NavToggle}.closed {
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 
-function InfluencerHome() {
+function InfluencerHome(props) {
   const [pills, setPills] = React.useState("2");
+  const {cardObj} = props.location.state;
+  console.log(cardObj);
+
   React.useEffect(() => {
     document.body.classList.add("profile-page");
     document.body.classList.add("sidebar-collapse");
@@ -69,8 +72,8 @@ const navLinks = [
   return (
     <>
       <div className="wrapper">
-      <StyledHeader links={navLinks} />
-      <ProfilePageHeader />
+      <StyledHeader links={navLinks}  />
+      <ProfilePageHeader card={cardObj} />
         <div className="section">
           <Container>
             <div className="button-container">

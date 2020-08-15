@@ -10,7 +10,7 @@ import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 //import { ReactComponent as FollowersIcon } from "src/images/demo/instagram.jpg"
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const Content = tw.div`mx-auto py-16 lg:py-20`;
@@ -139,12 +139,6 @@ export default () => {
 
   const history = useHistory();
 
-  const routeChange = () =>{ 
-    let path = `/influencer`; 
-    history.push(path);
-  }
-
-
   return (
     <Container>
       <Content>
@@ -182,7 +176,14 @@ export default () => {
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton onClick={routeChange}>Select Influencer</PrimaryButton>
+              <Link to={{
+                pathname: '/influencer',
+                state: {
+                  cardObj: card
+                }
+              }} >
+              <PrimaryButton> Select Influencer</PrimaryButton>
+              </Link>
             </Card>
           ))}
         </CardSlider>
