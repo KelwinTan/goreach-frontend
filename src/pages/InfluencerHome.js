@@ -50,7 +50,7 @@ function InfluencerHome(props) {
     };
   }, []);
 
-const navLinks = [
+  const navLinks = [
     <NavLinks key={1}>
       <NavLink href="/">
         Home
