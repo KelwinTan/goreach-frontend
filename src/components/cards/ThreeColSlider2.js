@@ -170,12 +170,7 @@ export default () => {
                 <Description>{card.description}</Description>
               </TextInfo>
               <PrimaryButton>
-                <Redirect to={{
-                  pathname: "/influencer",
-                  state: {img: card.imageSrc}
-                }} />
                 Select Influencer
-                
                 </PrimaryButton>
             </Card>
           ))}
