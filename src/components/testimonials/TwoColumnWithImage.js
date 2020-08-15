@@ -6,8 +6,8 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 import { ReactComponent as QuotesLeftIcon } from "../../images/quotes-l.svg";
 import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
-import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.svg";
-import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
+//import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.svg";
+//import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
 
@@ -47,20 +47,20 @@ const SliderControlButtonContainer = styled.div`
   }
 `;
 
-const NextArrow = ({ currentSlide, slideCount, ...props }) => (
-  <SliderControlButtonContainer tw="right-0">
-    <button {...props}>
-      <ArrowRightIcon />
-    </button>
-  </SliderControlButtonContainer>
-);
-const PreviousArrow = ({ currentSlide, slideCount, ...props }) => (
-  <SliderControlButtonContainer tw="left-0">
-    <button {...props}>
-      <ArrowLeftIcon />
-    </button>
-  </SliderControlButtonContainer>
-);
+// const NextArrow = ({ currentSlide, slideCount, ...props }) => (
+//   <SliderControlButtonContainer tw="right-0">
+//     <button {...props}>
+//       <ArrowRightIcon />
+//     </button>
+//   </SliderControlButtonContainer>
+// );
+// const PreviousArrow = ({ currentSlide, slideCount, ...props }) => (
+//   <SliderControlButtonContainer tw="left-0">
+//     <button {...props}>
+//       <ArrowLeftIcon />
+//     </button>
+//   </SliderControlButtonContainer>
+// );
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
@@ -83,22 +83,6 @@ export default () => {
       customerName: "Charlotte Hale",
       customerTitle: "CEO, Delos Inc."
     },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
-    },
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
-      quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti",
-      customerTitle: "Event Manager, Brite"
-    }
   ];
   return (
     <Container>
@@ -108,7 +92,7 @@ export default () => {
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
         <TestimonialSliderContainer>
-          <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
+          <TestimonialSlider>
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index}>
                 <ImageContainer>

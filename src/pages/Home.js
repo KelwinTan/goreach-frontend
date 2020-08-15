@@ -3,7 +3,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import About from "pages/About"
-import ChooseRegister from "custom_components/PortfolioTwoCardsWithImage.js"
+
+import ChooseRegister from "components/custom_components/PortfolioTwoCardsWithImage.js"
+
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "components/headers/light.js";
 
 const StyledHeader = styled(Header)`
