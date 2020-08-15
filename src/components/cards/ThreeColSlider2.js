@@ -149,7 +149,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Choose Your Influencer</Heading>
+          <Heading>Trending In Your Area</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
