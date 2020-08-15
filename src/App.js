@@ -19,7 +19,7 @@ function App() {
           <Home />
         </AnimationRevealPage>
       )} />
-      <Route path='/influencer' component={InfluencerHome} />
+      <Route path='/influencer' render={(props) => <InfluencerHome {...props} />} />
       <Route path='/Sponsor' component={SponsorHome} />
       <Route path='/join-sponsor' component={JoinSponsor} />
       <Route path='/join-influencer' component={JoinInfluencer} />

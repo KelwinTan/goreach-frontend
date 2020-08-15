@@ -61,10 +61,10 @@ export default () => {
                                     </InputContainer>
                                 </Column>
                             </TwoColumn>
-                            <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
                             <Link to={"/Sponsor"}>
-                                <CardAction>See Other Influencers</CardAction>
+                                <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
                             </Link>
+                            {/* <CardAction>See Other Influencers</CardAction> */}
                         </form>
                     </div>
                 </FormContainer>

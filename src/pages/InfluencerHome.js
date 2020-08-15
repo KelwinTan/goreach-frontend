@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 // reactstrap components
 import {
@@ -33,7 +33,7 @@ ${NavToggle}.closed {
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 
-function InfluencerHome() {
+function InfluencerHome(props) {
   const [pills, setPills] = React.useState("2");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -47,7 +47,7 @@ function InfluencerHome() {
     };
   }, []);
 
-const navLinks = [
+  const navLinks = [
     <NavLinks key={1}>
       <NavLink href="/">
         Home
@@ -66,11 +66,15 @@ const navLinks = [
     // </NavLinks>
   ];
 
+  useEffect(() => {
+    console.log("img", this.props.location.state.img)
+  });
+
   return (
     <>
       <div className="wrapper">
-      <StyledHeader links={navLinks} />
-      <ProfilePageHeader />
+        <StyledHeader links={navLinks} />
+        <ProfilePageHeader />
         <div className="section">
           <Container>
             <div className="button-container">
