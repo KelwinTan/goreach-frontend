@@ -10,7 +10,7 @@ import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 //import { ReactComponent as FollowersIcon } from "src/images/demo/instagram.jpg"
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const Content = tw.div`mx-auto py-16 lg:py-20`;
@@ -93,55 +93,42 @@ export default () => {
   /* Change this according to your needs */
   const cards = [
     {
-      imageSrc: "https://source.unsplash.com/OXZI7Si8JCU/",
-      name: "Tiffany Soe",
+      imageSrc: "https://images.unsplash.com/photo-1597236957537-fae1335cde2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      name: "Sisca Mulyadi",
       gender: "F",
-      description: "Dance",
-      followers: "10000",
-      activeloc: "HK",
-      ID:1,
+      description: "Crossfit",
+      followers: "2893",
+      activeloc: "ID",
+      ID:6,
     },
     {
       imageSrc: "https://source.unsplash.com/oQmsJCeYH2c/",
-      name: "Tiffany AL",
+      name: "Jessica Dharmawangsa",
       gender: "F",
       description: "Food",
-      followers: "2000",
+      followers: "2040",
       activeloc: "ID",
       ID:2,
     },
     {
       imageSrc: "https://source.unsplash.com/SS0PaWpkm8w",
-      name: "Leonardo Widjaja",
+      name: "Nicholas Chandra",
       gender: "M",
       description: "Game",
-      followers: "300",
+      followers: "305",
       activeloc: "ID",
-    },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1597460970375-1449df2fb73a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80",
-      name: "Alex Shaw",
-      gender: "F",
-      description: "Gym",
-      followers: "20000",
-      activeloc: "HK",
-    },
-    {
-      imageSrc: "https://images.unsplash.com/photo-1597439482746-a8b0cd1768e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      name: "Marya Volk",
-      gender: "F",
-      description: "Lifestyle",
-      followers: "20",
-      activeloc: "US",
-    },
+      ID:3,
+    }
+
+
 
   ]
-
   const history = useHistory();
 
   const routeChange = () =>{ 
     let path = `/influencer`; 
     history.push(path);
+    
   }
 
 
@@ -182,7 +169,14 @@ export default () => {
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton onClick={routeChange}>Select Influencer</PrimaryButton>
+              <PrimaryButton>
+                <Redirect to={{
+                  pathname: "/influencer",
+                  state: {img: card.imageSrc}
+                }} />
+                Select Influencer
+                
+                </PrimaryButton>
             </Card>
           ))}
         </CardSlider>
