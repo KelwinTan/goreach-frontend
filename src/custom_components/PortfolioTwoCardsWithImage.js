@@ -89,7 +89,7 @@ export default ({
       title: "Get funded and help promote businesses, grow your network.",
       durationText: "180 Day Campaign",
       locationText: "Palo Alto",
-      link: "/"
+      link: "/influencer"
     }
   ];
   return (

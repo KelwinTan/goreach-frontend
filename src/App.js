@@ -6,15 +6,19 @@ import Home from "pages/Home"
 import About from "pages/About"
 import SponsorHome from "pages/SponsorHome"
 import {BrowserRouter as Router,Route} from 'react-router-dom'
+import JasminePage from "pages/JasminePage"
+import InfluencerHome from "pages/InfluencerHome"
 
 function App() {
   return (
     <Router>
          <Route exact path='/' render = {props =>(
-           <AnimationRevealPage disabled>
+           <AnimationRevealPage>
               <Home />
            </AnimationRevealPage>
          )}/>
+          <Route exact path = '/jasmine' component={JasminePage}/>
+         <Route path = '/influencer' component={InfluencerHome}/>
          <Route path = '/Sponsor' component={SponsorHome}/>
     </Router>
 

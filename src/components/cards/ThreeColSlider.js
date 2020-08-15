@@ -10,6 +10,7 @@ import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 //import { ReactComponent as FollowersIcon } from "src/images/demo/instagram.jpg"
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
+import { useHistory } from "react-router-dom";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -92,7 +93,7 @@ export default () => {
   /* Change this according to your needs */
   const cards = [
     {
-      profilepicture: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
+      imageSrc: "https://source.unsplash.com/OXZI7Si8JCU/",
       name: "Ben",
       gender: "M",
       description: "Dance",
@@ -101,7 +102,7 @@ export default () => {
       ID:1,
     },
     {
-      profilepicture: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
+      imageSrc: "https://source.unsplash.com/oQmsJCeYH2c/",
       name: "Ben2",
       gender: "F",
       description: "Food",
@@ -110,7 +111,7 @@ export default () => {
       ID:2,
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
+      imageSrc: "https://source.unsplash.com/SS0PaWpkm8w",
       name: "Ben3",
       gender: "M",
       description: "Game",
@@ -135,6 +136,14 @@ export default () => {
     },
 
   ]
+
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `/jasmine`; 
+    history.push(path);
+  }
+
 
   return (
     <Container>
@@ -173,7 +182,7 @@ export default () => {
                 </SecondaryInfoContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton>Select Influencer</PrimaryButton>
+              <PrimaryButton onClick={routeChange}>Select Influencer</PrimaryButton>
             </Card>
           ))}
         </CardSlider>
