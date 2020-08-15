@@ -42,7 +42,7 @@ export default () => {
       <NavLink href="localhost:3000">
         Home
       </NavLink>
-      <NavLink href="localhost:3000/About">
+      <NavLink href="/About">
         About
       </NavLink>
       <NavLink href="#">

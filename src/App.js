@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div>
-         <Route exact path='/' render = {props =>(
+         <Route exact path='/' render = {props => (
             <AnimationRevealPage>
               <Home />
             </AnimationRevealPage>
