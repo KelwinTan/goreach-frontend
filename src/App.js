@@ -9,7 +9,7 @@ import JoinSponsor from "pages/JoinSponsor"
 import JoinInfluencer from "pages/JoinInfluencer"
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import InfluencerHome from "pages/InfluencerHome
+import InfluencerHome from "pages/InfluencerHome"
 
 function App() {
   return (
