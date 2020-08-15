@@ -47,11 +47,11 @@ function ProfilePageHeader(props) {
               <p>Followers</p>
             </div>
             <div className="social-description">
-              <h2>26</h2>
+        <h2>{props.card.comments}</h2>
               <p>Comments</p>
             </div>
             <div className="social-description">
-              <h2>48</h2>
+        <h2>{props.card.likes}</h2>
               <p>Likes</p>
             </div>
           </div>
